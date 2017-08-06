@@ -1,0 +1,2868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jHERE - Terrain, Marker, Marker Event</title>
+    <meta name="description" content="Map created with jHERE">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jhere.js"></script>
+    <link rel="icon" href="http://jhere.net/favicon.ico">
+  <style>/* CSS */
+
+  html,body{
+  font-family:sans-serif;
+  background:#fff;
+  color:#444;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+ 
+
+#main{
+width:100%;
+}
+
+#alert{
+width:25%;
+height:100%;
+background-color:red;
+fliat:left;
+position:absolute;
+right:0px;
+z-index:2;
+}
+
+#mapContainer{
+font-family:sans-serif;
+background:#D3D3D3;
+color:#444;
+height:100%;
+width:100%;
+padding:0;
+margin:0;
+float:left;
+}
+
+
+#text
+{
+width:30px;
+height:30px;
+}
+
+</style></head>
+  <body>
+
+ 
+
+ 
+   
+    <div id="mapContainer">
+
+<div id="showDiv">
+</div>
+
+	</div>
+	
+  
+
+ 
+	<!--#70ff00 运行中  1  "#ffff00" 在建计划  2    #ff9000 终止 3-->
+	
+  <script>/* Javascript
+ *
+ * See http://jhere.net/docs.html for full documentation
+ */ 
+
+$(window).on('load', function() {
+  $('#mapContainer').jHERE({
+        enable: ['behavior'],
+        center: [40, 60],
+        zoom: 3,
+        type: 'terrain'
+    })
+	
+	.jHERE('marker', [-33.9694751, -59.2102873], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#2","mainFrame","");},
+
+        click: function(){window.open("left.html#2","mainFrame","");}
+		
+    })
+	
+	.jHERE('marker', [-33.9671967, -59.2051322], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#3","mainFrame","");},
+
+        click: function(){window.open("left.html#3","mainFrame","");}
+		
+    })
+	
+	.jHERE('marker', [-32.2324, -64.4424], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#4","mainFrame","");},
+        click: function(){window.open("left.html#4","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [-33.9695, -59.2103], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#5","mainFrame","");},
+        click: function(){window.open("left.html#5","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [-34.4695, -58.9744], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#6","mainFrame","");},
+        click: function(){window.open("left.html#6","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [40.1814663, 44.1390482], {
+    	icon: 'logo2.png',
+		text: '!',
+        anchor: {x: 10, y: 10},	
+		mouseover: function(){window.open("left.html#8","mainFrame","");},
+        click: function(){window.open("left.html#8","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [24.0730326, 89.0473115], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#12","mainFrame","");},
+        click: function(){window.open("left.html#12","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.709807, 53.709807], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#14","mainFrame","");},
+        click: function(){window.open("left.html#14","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.3254662, 4.2644591], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#19","mainFrame","");},
+        click: function(){window.open("left.html#19","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [50.5329731, 5.2726524], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#23","mainFrame","");},
+        click: function(){window.open("left.html#23","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [-23.0071997, -44.4590477], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#26","mainFrame","");},
+        click: function(){window.open("left.html#26","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [-25.6905301, -54.457258], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#29","mainFrame","");},
+        click: function(){window.open("left.html#29","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [43.7438119, 23.7723634], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#33","mainFrame","");},
+        click: function(){window.open("left.html#33","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [43.6334952, 25.1841991], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#40","mainFrame","");},
+        click: function(){window.open("left.html#40","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [44.3243359, -81.593142], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#42","mainFrame","");},
+        click: function(){window.open("left.html#42","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [46.3951737, -72.3598597], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#43","mainFrame","");},
+        click: function(){window.open("left.html#43","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.8105075, -79.0638695], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#45","mainFrame","");},
+        click: function(){window.open("left.html#45","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [46.186667, -77.657778], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#47","mainFrame","");},
+        click: function(){window.open("left.html#47","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [43.8105075, -79.0638695], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#48","mainFrame","");},
+        click: function(){window.open("left.html#48","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [44.3275275, -81.5919903], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#54","mainFrame","");},
+        click: function(){window.open("left.html#54","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.8105036, -79.0638695], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#62","mainFrame","");},
+        click: function(){window.open("left.html#62","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [45.070583, -66.4533513], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#66","mainFrame","");},
+        click: function(){window.open("left.html#66","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [39.740833, 116.030278], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#72","mainFrame","");},
+        click: function(){window.open("left.html#72","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [22.6, 114.55], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#73","mainFrame","");},
+        click: function(){window.open("left.html#73","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [30.441342, 120.941758], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#75","mainFrame","");},
+        click: function(){window.open("left.html#75","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [25.445833, 119.447222], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#77","mainFrame","");},
+        click: function(){window.open("left.html#77","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [39.801944, 121.475], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#82","mainFrame","");},
+        click: function(){window.open("left.html#82","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [22.604789, 114.551489], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#88","mainFrame","");},
+        click: function(){window.open("left.html#88","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [27.07, 120.276667], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#92","mainFrame","");},
+        click: function(){window.open("left.html#92","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [30.433056, 120.95], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#96","mainFrame","");},
+        click: function(){window.open("left.html#96","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [34.7, 119.48], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#103","mainFrame","");},
+        click: function(){window.open("left.html#103","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [21.706192, 112.263425], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#107","mainFrame","");},
+        click: function(){window.open("left.html#107","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [19.46075, 108.899917], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#113","mainFrame","");},
+        click: function(){window.open("left.html#113","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [21.6099426, 108.3076691], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#115","mainFrame","");},
+        click: function(){window.open("left.html#115","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.708333, 121.383333], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#117","mainFrame","");},
+        click: function(){window.open("left.html#117","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.101111, 121.641944], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#119","mainFrame","");},
+        click: function(){window.open("left.html#119","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [36.895455, 122.435272], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#121","mainFrame","");},
+        click: function(){window.open("left.html#121","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [21.918056, 112.981667], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#122","mainFrame","");},
+        click: function(){window.open("left.html#122","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [28.53, 112.12], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#124","mainFrame","");},
+        click: function(){window.open("left.html#124","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.68, 114.67], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#125","mainFrame","");},
+        click: function(){window.open("left.html#125","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.9, 116.55], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#126","mainFrame","");},
+        click: function(){window.open("left.html#126","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.334722, 120.529167], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#127","mainFrame","");},
+        click: function(){window.open("left.html#127","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.70, 107.36], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#128","mainFrame","");},
+        click: function(){window.open("left.html#128","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [22.98, 115.33], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#129","mainFrame","");},
+        click: function(){window.open("left.html#129","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [31.03, 106.42], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#130","mainFrame","");},
+        click: function(){window.open("left.html#130","mainFrame","");}
+		       
+    })
+	
+	
+    	.jHERE('marker', [29.03, 119.17], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#131","mainFrame","");},
+        click: function(){window.open("left.html#131","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.87, 124.15], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#132","mainFrame","");},
+        click: function(){window.open("left.html#132","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [31.33, 118.38], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#133","mainFrame","");},
+        click: function(){window.open("left.html#133","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [33.318611, 112.540833], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#134","mainFrame","");},
+        click: function(){window.open("left.html#134","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.7375, 112.826389], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#135","mainFrame","");},
+        click: function(){window.open("left.html#135","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [42.38, 126.8], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#136","mainFrame","");},
+        click: function(){window.open("left.html#136","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [30.1, 117.02], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#137","mainFrame","");},
+        click: function(){window.open("left.html#137","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [24.52, 117.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#138","mainFrame","");},
+        click: function(){window.open("left.html#138","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [26.23, 117.61], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#139","mainFrame","");},
+        click: function(){window.open("left.html#139","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [23.55, 116.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#140","mainFrame","");},
+        click: function(){window.open("left.html#140","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [24.84, 113.62], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#141","mainFrame","");},
+        click: function(){window.open("left.html#141","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [46.83, 130.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#142","mainFrame","");},
+        click: function(){window.open("left.html#142","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [27.53, 120.36], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#143","mainFrame","");},
+        click: function(){window.open("left.html#143","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [30.18, 111.77], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#144","mainFrame","");},
+        click: function(){window.open("left.html#144","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [26.47, 114.78], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#145","mainFrame","");},
+        click: function(){window.open("left.html#145","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [23.05, 112.44], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#146","mainFrame","");},
+        click: function(){window.open("left.html#146","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.0851900, 16.1469800], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#147","mainFrame","");},
+        click: function(){window.open("left.html#147","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [49.11, 14.21], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#151","mainFrame","");},
+        click: function(){window.open("left.html#151","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [31.00, 28.27], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#155","mainFrame","");},
+        click: function(){window.open("left.html#155","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [60.372222, 26.347222], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#156","mainFrame","");},
+        click: function(){window.open("left.html#156","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [61.236944, 21.440833], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#158","mainFrame","");},
+        click: function(){window.open("left.html#158","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [47.509722, 2.875], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#161","mainFrame","");},
+        click: function(){window.open("left.html#161","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.255833, -0.693056], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#163","mainFrame","");},
+        click: function(){window.open("left.html#163","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.798333, 5.270833], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#167","mainFrame","");},
+        click: function(){window.open("left.html#167","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.415833, 6.218056], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#172","mainFrame","");},
+        click: function(){window.open("left.html#172","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.2285595, 0.1682926], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#176","mainFrame","");},
+        click: function(){window.open("left.html#176","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.09, 4.789444], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#180","mainFrame","");},
+        click: function(){window.open("left.html#180","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [46.456667, 0.652778], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#182","mainFrame","");},
+        click: function(){window.open("left.html#182","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [44.633056, 4.756667], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#184","mainFrame","");},
+        click: function(){window.open("left.html#184","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [47.7325158, 2.5177699], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#188","mainFrame","");},
+        click: function(){window.open("left.html#188","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.903059, 7.563083], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#192","mainFrame","");},
+        click: function(){window.open("left.html#192","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.5367124, -1.8822772], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#194","mainFrame","");},
+        click: function(){window.open("left.html#194","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [44.106667, 0.845278], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#196","mainFrame","");},
+        click: function(){window.open("left.html#196","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.015278, 2.136111], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#198","mainFrame","");},
+        click: function(){window.open("left.html#198","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [48.515278, 3.517778], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#204","mainFrame","");},
+        click: function(){window.open("left.html#204","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.858056, 0.635556], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#206","mainFrame","");},
+        click: function(){window.open("left.html#206","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.976667, 1.211944], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#210","mainFrame","");},
+        click: function(){window.open("left.html#210","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.404444, 4.755278], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#212","mainFrame","");},
+        click: function(){window.open("left.html#212","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.72, 1.5775], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#214","mainFrame","");},
+        click: function(){window.open("left.html#214","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [44.329722, 4.732222], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#218","mainFrame","");},
+        click: function(){window.open("left.html#218","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [49.536389, -1.881667], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#222","mainFrame","");},
+        click: function(){window.open("left.html#222","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.2325, 0.1703], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#223","mainFrame","");},
+        click: function(){window.open("left.html#223","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [50.09, 4.789444], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#226","mainFrame","");},
+        click: function(){window.open("left.html#226","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.3533, -3.872203], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#227","mainFrame","");},
+        click: function(){window.open("left.html#227","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [44.143333, 4.709444], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#228","mainFrame","");},
+        click: function(){window.open("left.html#228","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.758333, 5.472222], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#231","mainFrame","");},
+        click: function(){window.open("left.html#231","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [53.850833, 9.344722], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#232","mainFrame","");},
+        click: function(){window.open("left.html#232","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [52.474231, 7.317858], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#233","mainFrame","");},
+        click: function(){window.open("left.html#233","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [49.984086, 10.184669], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#234","mainFrame","");},
+        click: function(){window.open("left.html#234","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [52.035278, 9.413333], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#235","mainFrame","");},
+        click: function(){window.open("left.html#235","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.515538, 10.402079], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#236","mainFrame","");},
+        click: function(){window.open("left.html#236","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.604475, 12.29721], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#239","mainFrame","");},
+        click: function(){window.open("left.html#239","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [49.040621, 9.17559], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#241","mainFrame","");},
+        click: function(){window.open("left.html#241","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.251308, 8.435676], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#243","mainFrame","");},
+        click: function(){window.open("left.html#243","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [50.90306, 6.421369], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#245","mainFrame","");},
+        click: function(){window.open("left.html#245","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.71, 8.415278], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#246","mainFrame","");},
+        click: function(){window.open("left.html#246","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.90306, 6.421369], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#248","mainFrame","");},
+        click: function(){window.open("left2.html#248","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [54.141524, 13.662422], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#249","mainFrame","");},
+        click: function(){window.open("left2.html#249","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.055145, 8.984869], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#257","mainFrame","");},
+        click: function(){window.open("left2.html#257","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.097328, 8.432774], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#258","mainFrame","");},
+        click: function(){window.open("left2.html#258","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.41, 10.408889], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#259","mainFrame","");},
+        click: function(){window.open("left2.html#259","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [52.483185, 7.300522], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#260","mainFrame","");},
+        click: function(){window.open("left2.html#260","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.408791, 7.486196], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#261","mainFrame","");},
+        click: function(){window.open("left2.html#261","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [49.104247, 8.432339], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#262","mainFrame","");},
+        click: function(){window.open("left2.html#262","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.605802, 12.300085], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#263","mainFrame","");},
+        click: function(){window.open("left2.html#263","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [49.364503, 9.076252], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#264","mainFrame","");},
+        click: function(){window.open("left2.html#264","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.146992, 12.99015], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#265","mainFrame","");},
+        click: function(){window.open("left2.html#265","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.62, 9.530833], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#266","mainFrame","");},
+        click: function(){window.open("left2.html#266","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.678623, 7.970023], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#267","mainFrame","");},
+        click: function(){window.open("left2.html#267","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.4277, 8.480197], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#268","mainFrame","");},
+        click: function(){window.open("left2.html#268","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.059129, 8.987181], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#269","mainFrame","");},
+        click: function(){window.open("left2.html#269","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.639648, 9.391562], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#270","mainFrame","");},
+        click: function(){window.open("left2.html#270","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.639648, 6.324606], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#271","mainFrame","");},
+        click: function(){window.open("left2.html#271","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [52.724133, 12.019325], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#272","mainFrame","");},
+        click: function(){window.open("left2.html#272","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [46.57334, 18.852357], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#274","mainFrame","");},
+        click: function(){window.open("left2.html#274","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [14.865322, 74.439642], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#280","mainFrame","");},
+        click: function(){window.open("left2.html#280","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [21.238611, 73.35], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#284","mainFrame","");},
+        click: function(){window.open("left2.html#284","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [8.168889, 77.7125], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#288","mainFrame","");},
+        click: function(){window.open("left2.html#288","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [12.5575, 80.175], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#290","mainFrame","");},
+        click: function(){window.open("left2.html#290","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [28.158056, 78.409444], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#292","mainFrame","");},
+        click: function(){window.open("left2.html#292","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [24.872222, 75.613889], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#294","mainFrame","");},
+        click: function(){window.open("left2.html#294","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [19.828981, 72.661206], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#302","mainFrame","");},
+        click: function(){window.open("left2.html#302","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [12.553056, 80.173333], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#306","mainFrame","");},
+        click: function(){window.open("left2.html#306","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [28.829622, 50.885961], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#307","mainFrame","");},
+        click: function(){window.open("left2.html#307","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [30.7075522, 48.3640479], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#309","mainFrame","");},
+        click: function(){window.open("left2.html#309","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.07206, 9.87214], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#310","mainFrame","");},
+        click: function(){window.open("left2.html#310","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.962778, -83.2575], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#311","mainFrame","");},
+        click: function(){window.open("left2.html#311","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.2584671, 13.8346739], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#312","mainFrame","");},
+        click: function(){window.open("left2.html#312","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.4261083, 12.8068614], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#313","mainFrame","");},
+        click: function(){window.open("left2.html#313","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.4261083, 12.8068614], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#315","mainFrame","");},
+        click: function(){window.open("left2.html#315","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [41.8714323, 12.5658981], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#317","mainFrame","");},
+        click: function(){window.open("left2.html#317","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.316389, 141.025556], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#318","mainFrame","");},
+        click: function(){window.open("left2.html#318","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [33.515556, 129.837222], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#322","mainFrame","");},
+        click: function(){window.open("left2.html#322","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [34.6228954, 138.1433087], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#326","mainFrame","");},
+        click: function(){window.open("left2.html#326","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.188056, 141.390278], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#332","mainFrame","");},
+        click: function(){window.open("left2.html#332","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [33.490833, 132.311389], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#336","mainFrame","");},
+        click: function(){window.open("left2.html#336","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.428333, 138.601667], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#339","mainFrame","");},
+        click: function(){window.open("left2.html#339","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.703475, 135.963578], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#346","mainFrame","");},
+        click: function(){window.open("left2.html#346","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.540625, 135.652033], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#349","mainFrame","");},
+        click: function(){window.open("left2.html#349","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.540625, 135.652033], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#349","mainFrame","");},
+        click: function(){window.open("left2.html#349","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [38.401111, 141.499722], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#353","mainFrame","");},
+        click: function(){window.open("left2.html#353","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [31.833611, 130.189722], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#356","mainFrame","");},
+        click: function(){window.open("left2.html#356","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.061111, 136.726389], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#359","mainFrame","");},
+        click: function(){window.open("left2.html#359","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [35.538333, 132.999167], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#361","mainFrame","");},
+        click: function(){window.open("left2.html#361","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.521992, 135.503956], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#364","mainFrame","");},
+        click: function(){window.open("left2.html#364","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.466389, 140.606667], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#368","mainFrame","");},
+        click: function(){window.open("left2.html#368","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.036111, 140.5125], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#370","mainFrame","");},
+        click: function(){window.open("left2.html#370","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.751944, 136.018889], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#373","mainFrame","");},
+        click: function(){window.open("left2.html#373","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [41.509722, 140.910278], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#377","mainFrame","");},
+        click: function(){window.open("left2.html#377","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.740278, 135.988056], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#378","mainFrame","");},
+        click: function(){window.open("left2.html#378","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.754444, 136.016389], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#379","mainFrame","");},
+        click: function(){window.open("left2.html#379","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.423056, 141.033056], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#380","mainFrame","");},
+        click: function(){window.open("left2.html#380","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.458461, 140.606342], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#386","mainFrame","");},
+        click: function(){window.open("left2.html#386","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.2124397, 138.246394], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#387","mainFrame","");},
+        click: function(){window.open("left2.html#387","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.28, 141.00], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#389","mainFrame","");},
+        click: function(){window.open("left2.html#389","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.527312074593198, 35.00638899291995], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#393","mainFrame","");},
+        click: function(){window.open("left2.html#393","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [43.63886116529275, 51.197824654492244], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#394","mainFrame","");},
+        click: function(){window.open("left2.html#394","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [35.415, 126.423889], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#396","mainFrame","");},
+        click: function(){window.open("left2.html#396","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.092778, 129.383611], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#402","mainFrame","");},
+        click: function(){window.open("left2.html#402","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.319904, 129.290053], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#412","mainFrame","");},
+        click: function(){window.open("left2.html#412","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.716667, 129.477778], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#422","mainFrame","");},
+        click: function(){window.open("left2.html#422","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [55.604444, 26.56], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#430","mainFrame","");},
+        click: function(){window.open("left2.html#430","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [21.2835944, -89.6557386], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#433","mainFrame","");},
+        click: function(){window.open("left2.html#433","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [21.2835944, -89.6557386], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#434","mainFrame","");},
+        click: function(){window.open("left2.html#434","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.4307297, 3.7153524], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#435","mainFrame","");},
+        click: function(){window.open("left2.html#435","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [32.392, 71.46164], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#437","mainFrame","");},
+        click: function(){window.open("left2.html#437","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [44.19, 28.03], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#442","mainFrame","");},
+        click: function(){window.open("left2.html#442","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [55.1170375, 36.59708180000007], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#446","mainFrame","");},
+        click: function(){window.open("left2.html#446","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [52.0245587, 47.78066260000003], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#447","mainFrame","");},
+        click: function(){window.open("left2.html#447","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [59.55, 30.15], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#451","mainFrame","");},
+        click: function(){window.open("left2.html#451","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.459035175039425, 83.89138899999999], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#452","mainFrame","");},
+        click: function(){window.open("left2.html#452","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [68.05963899999999, 166.443893], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#456","mainFrame","");},
+        click: function(){window.open("left2.html#456","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [48.8799128, 26.84050160000004], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#460","mainFrame","");},
+        click: function(){window.open("left2.html#460","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [52.19986, 18.638469999999984], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#464","mainFrame","");},
+        click: function(){window.open("left2.html#464","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.7091957, 36.15622410000003], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#468","mainFrame","");},
+        click: function(){window.open("left2.html#468","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [60.0793208, 31.892664400000058], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#472","mainFrame","");},
+        click: function(){window.open("left2.html#472","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [51.30807009999999, 39.220018799999934], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#478","mainFrame","");},
+        click: function(){window.open("left2.html#478","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.2357137, 39.701505], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#485","mainFrame","");},
+        click: function(){window.open("left2.html#485","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [54.7903112, 32.05036629999995], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#489","mainFrame","");},
+        click: function(){window.open("left2.html#489","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.1600939, 17.1607182], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#492","mainFrame","");},
+        click: function(){window.open("left2.html#492","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [48.1452018, 17.1358754], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#497","mainFrame","");},
+        click: function(){window.open("left2.html#497","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.938337, 15.5133669], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#501","mainFrame","");},
+        click: function(){window.open("left2.html#501","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [-26.7201798, 23.3324735], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#502","mainFrame","");},
+        click: function(){window.open("left2.html#502","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.814327, -5.675295699999992], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#504","mainFrame","");},
+        click: function(){window.open("left2.html#504","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.1956793, 0.5672658], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#506","mainFrame","");},
+        click: function(){window.open("left2.html#506","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [42.558477, -4.3769121], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#508","mainFrame","");},
+        click: function(){window.open("left2.html#508","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [42.7759438, -3.2107981], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#510","mainFrame","");},
+        click: function(){window.open("left2.html#510","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.7007797, -2.592884099999992], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#511","mainFrame","");},
+        click: function(){window.open("left2.html#511","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.0194958, 0.8316193000000567], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#512","mainFrame","");},
+        click: function(){window.open("left2.html#512","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [55.7435161, 12.9179958], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#514","mainFrame","");},
+        click: function(){window.open("left2.html#514","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [60.1661663, 18.191071], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#517","mainFrame","");},
+        click: function(){window.open("left2.html#517","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [57.4165923, 16.6707874], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#520","mainFrame","");},
+        click: function(){window.open("left2.html#520","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [57.2347029, 12.2072613], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#523","mainFrame","");},
+        click: function(){window.open("left2.html#523","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.5530478, 8.2277908], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#527","mainFrame","");},
+        click: function(){window.open("left2.html#527","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.6010848, 8.180444], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#529","mainFrame","");},
+        click: function(){window.open("left2.html#529","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [46.5185339, 6.6268328], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#531","mainFrame","");},
+        click: function(){window.open("left2.html#531","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [46.9427991, 6.8505484], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#532","mainFrame","");},
+        click: function(){window.open("left2.html#532","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [51.2763027, 30.221899200000053], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#533","mainFrame","");},
+        click: function(){window.open("left2.html#533","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [49.422983, 26.98713299999997], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#537","mainFrame","");},
+        click: function(){window.open("left2.html#537","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [50.6199, 26.25161700000001], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#541","mainFrame","");},
+        click: function(){window.open("left2.html#541","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [49.4263219, 32.0117381], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#545","mainFrame","");},
+        click: function(){window.open("left3.html#545","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [47.8388, 35.13956699999994], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#548","mainFrame","");},
+        click: function(){window.open("left3.html#548","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [24.2148344, 52.1897916], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#554","mainFrame","");},
+        click: function(){window.open("left3.html#554","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [53.2392187, -6.1286847], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#558","mainFrame","");},
+        click: function(){window.open("left3.html#558","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.0836468, -6.1292367], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#574","mainFrame","");},
+        click: function(){window.open("left3.html#574","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.2392187, -6.1286847], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#582","mainFrame","");},
+        click: function(){window.open("left3.html#582","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [53.0836468, -6.1292367], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#588","mainFrame","");},
+        click: function(){window.open("left3.html#588","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [53.2392187, -6.1286847], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#590","mainFrame","");},
+        click: function(){window.open("left3.html#590","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [53.0836468, -6.1292367], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#594","mainFrame","");},
+        click: function(){window.open("left3.html#594","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.2392187, -6.1286847], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#597","mainFrame","");},
+        click: function(){window.open("left3.html#597","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [51.6578388, -1.2342253], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#599","mainFrame","");},
+        click: function(){window.open("left3.html#599","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [53.2392187, -6.1286847], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#601","mainFrame","");},
+        click: function(){window.open("left3.html#601","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [42.8405685, -85.8416323], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#603","mainFrame","");},
+        click: function(){window.open("left3.html#603","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [42.6810942, -85.8423027], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#605","mainFrame","");},
+        click: function(){window.open("left3.html#605","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [45.3611334, -85.21243], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#607","mainFrame","");},
+        click: function(){window.open("left3.html#607","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [18.2951398, -65.8022214], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#608","mainFrame","");},
+        click: function(){window.open("left3.html#608","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.8924851, -87.4306726], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#609","mainFrame","");},
+        click: function(){window.open("left3.html#609","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.5772809, -87.4320534], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#611","mainFrame","");},
+        click: function(){window.open("left3.html#611","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [40.1058657, -87.4341359], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#614","mainFrame","");},
+        click: function(){window.open("left3.html#614","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.9491178, -87.434833], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#616","mainFrame","");},
+        click: function(){window.open("left3.html#616","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.7925732, -87.4355316], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#618","mainFrame","");},
+        click: function(){window.open("left3.html#618","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.6362369, -87.4362316], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#619","mainFrame","");},
+        click: function(){window.open("left3.html#619","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.4801134, -87.4369331], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#621","mainFrame","");},
+        click: function(){window.open("left3.html#621","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [39.3242076, -87.4376361], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#623","mainFrame","");},
+        click: function(){window.open("left3.html#623","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [46.4716611, -119.3393335], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#624","mainFrame","");},
+        click: function(){window.open("left3.html#624","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [31.8470522, -99.8333521], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#625","mainFrame","");},
+        click: function(){window.open("left3.html#625","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [31.8169993, -99.8335374], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#627","mainFrame","");},
+        click: function(){window.open("left3.html#627","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [31.5023581, -106.609909], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#629","mainFrame","");},
+        click: function(){window.open("left3.html#629","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [30.9084449, -106.6135944], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#630","mainFrame","");},
+        click: function(){window.open("left3.html#630","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [38.1159469, -79.6538225], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#631","mainFrame","");},
+        click: function(){window.open("left3.html#631","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.8758724, -83.0265102], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#632","mainFrame","");},
+        click: function(){window.open("left3.html#632","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.3199961, -120.7689454], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#633","mainFrame","");},
+        click: function(){window.open("left3.html#633","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.0898362, -87.4305962], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#635","mainFrame","");},
+        click: function(){window.open("left3.html#635","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.9319281, -87.431284], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#638","mainFrame","");},
+        click: function(){window.open("left3.html#638","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.7741926, -87.4319732], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#639","mainFrame","");},
+        click: function(){window.open("left3.html#639","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [32.1753163, -87.2210932], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#640","mainFrame","");},
+        click: function(){window.open("left3.html#640","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [42.0226354, -83.4185591], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#642","mainFrame","");},
+        click: function(){window.open("left3.html#642","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.9433645, -87.7701696], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#644","mainFrame","");},
+        click: function(){window.open("left3.html#644","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.8508374, -97.1931625], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#645","mainFrame","");},
+        click: function(){window.open("left3.html#645","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.244469, -104.8759634], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#646","mainFrame","");},
+        click: function(){window.open("left3.html#646","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.8456812, -106.5711065], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#647","mainFrame","");},
+        click: function(){window.open("left3.html#647","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.7707238, -110.5046526], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#648","mainFrame","");},
+        click: function(){window.open("left3.html#648","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [41.9433645, -87.7701696], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#649","mainFrame","");},
+        click: function(){window.open("left3.html#649","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [42.7530174, -72.8631179], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#650","mainFrame","");},
+        click: function(){window.open("left3.html#650","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [40.33, -96.47], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#651","mainFrame","");},
+        click: function(){window.open("left3.html#651","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.7750312, -78.6412558], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#652","mainFrame","");},
+        click: function(){window.open("left3.html#652","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.8188995, -77.3240558], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#653","mainFrame","");},
+        click: function(){window.open("left3.html#653","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.4668689, -75.5396847], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#655","mainFrame","");},
+        click: function(){window.open("left3.html#655","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [38.9438499, -77.1287403], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#656","mainFrame","");},
+        click: function(){window.open("left3.html#656","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [42.8405685, -85.8416323], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#657","mainFrame","");},
+        click: function(){window.open("left3.html#657","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [36.7714874, -76.3043299], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#660","mainFrame","");},
+        click: function(){window.open("left3.html#660","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [44.1120771, -94.5299028], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#661","mainFrame","");},
+        click: function(){window.open("left3.html#661","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [44.0760648, -94.5300598], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#662","mainFrame","");},
+        click: function(){window.open("left3.html#662","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.9630544, -69.7038277], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#666","mainFrame","");},
+        click: function(){window.open("left3.html#666","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.9418091, -70.4016696], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#667","mainFrame","");},
+        click: function(){window.open("left3.html#667","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.7714874, -76.3043299], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#669","mainFrame","");},
+        click: function(){window.open("left3.html#669","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [38.0086043, -78.45319940000002], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#672","mainFrame","");},
+        click: function(){window.open("left3.html#672","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.7707238, -110.5046526], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#673","mainFrame","");},
+        click: function(){window.open("left3.html#673","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.7714874, -76.3043299], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#675","mainFrame","");},
+        click: function(){window.open("left3.html#675","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [43.9418091, -70.4016696], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#677","mainFrame","");},
+        click: function(){window.open("left3.html#677","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [35.7707238, -110.5046526], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#680","mainFrame","");},
+        click: function(){window.open("left3.html#680","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [42.8405685, -85.8416323], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#681","mainFrame","");},
+        click: function(){window.open("left3.html#681","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [34.6827931, -114.3869267], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#682","mainFrame","");},
+        click: function(){window.open("left3.html#682","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [32.0741273, -114.4212891], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#685","mainFrame","");},
+        click: function(){window.open("left3.html#685","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [35.7707238, -110.5046526], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#686","mainFrame","");},
+        click: function(){window.open("left3.html#686","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.8235974, -82.4514143], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#689","mainFrame","");},
+        click: function(){window.open("left3.html#689","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [42.8405685, -85.8416323], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#690","mainFrame","");},
+        click: function(){window.open("left3.html#690","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [40.1474835, -84.2432217], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#691","mainFrame","");},
+        click: function(){window.open("left3.html#691","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [38.3313727, -112.4809069], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#692","mainFrame","");},
+        click: function(){window.open("left3.html#692","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [44.6491341, -92.69130849999999], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#694","mainFrame","");},
+        click: function(){window.open("left3.html#694","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.7707238, -110.5046526], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#696","mainFrame","");},
+        click: function(){window.open("left3.html#696","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [38.5520064, -121.4332705], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#698","mainFrame","");},
+        click: function(){window.open("left3.html#698","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [42.8405685, -85.8416323], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#699","mainFrame","");},
+        click: function(){window.open("left3.html#699","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [35.7750312, -78.6412558], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#700","mainFrame","");},
+        click: function(){window.open("left3.html#700","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.0986035, -75.9741433], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#701","mainFrame","");},
+        click: function(){window.open("left3.html#701","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [33.4004548, -81.5665235], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#703","mainFrame","");},
+        click: function(){window.open("left3.html#703","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [40.21535710000001, -78.24445630000002], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#706","mainFrame","");},
+        click: function(){window.open("left3.html#706","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [36.2515607, -96.8811934], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#707","mainFrame","");},
+        click: function(){window.open("left3.html#707","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.5732746, -88.1519039], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#708","mainFrame","");},
+        click: function(){window.open("left3.html#708","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [40.6320101, -80.41395390000002], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#710","mainFrame","");},
+        click: function(){window.open("left3.html#710","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.7252674, -73.596062], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#711","mainFrame","");},
+        click: function(){window.open("left3.html#711","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [28.7957087, -96.0357747], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#712","mainFrame","");},
+        click: function(){window.open("left3.html#712","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [33.3258522, -84.9400884], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#714","mainFrame","");},
+        click: function(){window.open("left3.html#714","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [33.4004548, -81.5665235], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#716","mainFrame","");},
+        click: function(){window.open("left3.html#716","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.7714874, -76.3043299], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#719","mainFrame","");},
+        click: function(){window.open("left3.html#719","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.0645258, -77.1838062], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#721","mainFrame","");},
+        click: function(){window.open("left3.html#721","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.8583853, -82.4512466], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#723","mainFrame","");},
+        click: function(){window.open("left3.html#723","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [46.0365184, -122.8913685], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#725","mainFrame","");},
+        click: function(){window.open("left3.html#725","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [32.4323691, -97.2130328], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#726","mainFrame","");},
+        click: function(){window.open("left3.html#726","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [42.3183075, -90.7840054], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#728","mainFrame","");},
+        click: function(){window.open("left3.html#728","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.1806327, -92.1727778], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#729","mainFrame","");},
+        click: function(){window.open("left3.html#729","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.4818453, -92.1713176], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#733","mainFrame","");},
+        click: function(){window.open("left3.html#733","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [36.5603937, -88.7988361], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#734","mainFrame","");},
+        click: function(){window.open("left3.html#734","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [38.2392884, -95.6916581], {
+    	icon: 'logo.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#736","mainFrame","");},
+        click: function(){window.open("left3.html#736","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [42.7266969, -72.9349664], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#737","mainFrame","");},
+        click: function(){window.open("left3.html#737","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [37.7224928, -83.0272276], {
+    	icon: 'logo3.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#738","mainFrame","");},
+        click: function(){window.open("left3.html#738","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	});
+
+
+//$(document.getElementById('iframeId').contentWindow.document.body).htm()
+//window.parent.frames["topFrame"].document).find("#x1").text();
+//window.parent.frames[1].location.href="newpage.html"
+//click: function(){window.location="left.html#2";}
+//click: function(){window.open("country.html","bottom","");}
+//click: function(){alert('Hallo from Berlin!!!!!!!!!!!!!');}
+//mouseover: function(){$("div").text("脚本之家欢迎您！")},
+
+</script></body>
+</html>

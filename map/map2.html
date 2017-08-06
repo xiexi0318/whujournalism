@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+	<link rel="shortcut icon" href="images/favicon.ico" />
+    <meta name="description" content="Map created with jHERE">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jhere.js"></script>
+    <link rel="icon" href="http://jhere.net/favicon.ico">
+  <style>/* CSS */
+
+  html,body{
+  font-family:sans-serif;
+  background:#fff;
+  color:#444;
+  height:100%;
+  padding:0;
+  margin:0;
+}
+ 
+
+#main{
+width:100%;
+}
+
+#alert{
+width:25%;
+height:100%;
+background-color:red;
+fliat:left;
+position:absolute;
+right:0px;
+z-index:2;
+}
+
+#mapContainer{
+font-family:sans-serif;
+background:#D3D3D3;
+color:#444;
+height:100%;
+width:100%;
+padding:0;
+margin:0;
+float:left;
+}
+
+
+#text
+{
+width:30px;
+height:30px;
+}
+
+</style></head>
+  <body>
+
+ 
+
+ 
+   
+    <div id="mapContainer">
+
+<div id="showDiv">
+</div>
+
+	</div>
+	
+  
+
+ 
+	<!--#70ff00 运行中  1  "#ffff00" 在建计划  2    #ff9000 终止 3-->
+	
+  <script>/* Javascript
+ *
+ * See http://jhere.net/docs.html for full documentation
+ */ 
+
+$(window).on('load', function() {
+  $('#mapContainer').jHERE({
+        enable: ['behavior'],
+        center: [40, 60],
+        zoom: 3,
+        type: 'terrain'
+    })
+	
+	
+	
+	
+	.jHERE('marker', [-33.9695, -59.2103], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#5","mainFrame","");},
+        click: function(){window.open("left.html#5","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [-34.4695, -58.9744], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#6","mainFrame","");},
+        click: function(){window.open("left.html#6","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [40.1814663, 44.1390482], {
+    	icon: 'logo2.png',
+		text: '!',
+        anchor: {x: 10, y: 10},	
+		mouseover: function(){window.open("left.html#8","mainFrame","");},
+        click: function(){window.open("left.html#8","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [24.0730326, 89.0473115], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#12","mainFrame","");},
+        click: function(){window.open("left.html#12","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [53.709807, 53.709807], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#14","mainFrame","");},
+        click: function(){window.open("left.html#14","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	
+	.jHERE('marker', [-25.6905301, -54.457258], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#29","mainFrame","");},
+        click: function(){window.open("left.html#29","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	
+	.jHERE('marker', [19.46075, 108.899917], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#113","mainFrame","");},
+        click: function(){window.open("left.html#113","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [21.6099426, 108.3076691], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#115","mainFrame","");},
+        click: function(){window.open("left.html#115","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [36.708333, 121.383333], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#117","mainFrame","");},
+        click: function(){window.open("left.html#117","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.101111, 121.641944], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#119","mainFrame","");},
+        click: function(){window.open("left.html#119","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [36.895455, 122.435272], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#121","mainFrame","");},
+        click: function(){window.open("left.html#121","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [21.918056, 112.981667], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#122","mainFrame","");},
+        click: function(){window.open("left.html#122","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [28.53, 112.12], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#124","mainFrame","");},
+        click: function(){window.open("left.html#124","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.68, 114.67], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#125","mainFrame","");},
+        click: function(){window.open("left.html#125","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.9, 116.55], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#126","mainFrame","");},
+        click: function(){window.open("left.html#126","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [40.334722, 120.529167], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#127","mainFrame","");},
+        click: function(){window.open("left.html#127","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.70, 107.36], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#128","mainFrame","");},
+        click: function(){window.open("left.html#128","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [22.98, 115.33], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#129","mainFrame","");},
+        click: function(){window.open("left.html#129","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [31.03, 106.42], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#130","mainFrame","");},
+        click: function(){window.open("left.html#130","mainFrame","");}
+		       
+    })
+	
+	
+    	.jHERE('marker', [29.03, 119.17], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#131","mainFrame","");},
+        click: function(){window.open("left.html#131","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [39.87, 124.15], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#132","mainFrame","");},
+        click: function(){window.open("left.html#132","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [31.33, 118.38], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#133","mainFrame","");},
+        click: function(){window.open("left.html#133","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [33.318611, 112.540833], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#134","mainFrame","");},
+        click: function(){window.open("left.html#134","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.7375, 112.826389], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#135","mainFrame","");},
+        click: function(){window.open("left.html#135","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [42.38, 126.8], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#136","mainFrame","");},
+        click: function(){window.open("left.html#136","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [30.1, 117.02], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#137","mainFrame","");},
+        click: function(){window.open("left.html#137","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [24.52, 117.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#138","mainFrame","");},
+        click: function(){window.open("left.html#138","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [26.23, 117.61], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#139","mainFrame","");},
+        click: function(){window.open("left.html#139","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [23.55, 116.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#140","mainFrame","");},
+        click: function(){window.open("left.html#140","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [24.84, 113.62], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#141","mainFrame","");},
+        click: function(){window.open("left.html#141","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [46.83, 130.35], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#142","mainFrame","");},
+        click: function(){window.open("left.html#142","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [27.53, 120.36], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#143","mainFrame","");},
+        click: function(){window.open("left.html#143","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [30.18, 111.77], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#144","mainFrame","");},
+        click: function(){window.open("left.html#144","mainFrame","");}
+		       
+    })
+	
+	.jHERE('marker', [26.47, 114.78], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#145","mainFrame","");},
+        click: function(){window.open("left.html#145","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	.jHERE('marker', [31.00, 28.27], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#155","mainFrame","");},
+        click: function(){window.open("left.html#155","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [49.536389, -1.881667], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left.html#222","mainFrame","");},
+        click: function(){window.open("left.html#222","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [12.553056, 80.173333], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#306","mainFrame","");},
+        click: function(){window.open("left2.html#306","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	
+	.jHERE('marker', [30.7075522, 48.3640479], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#309","mainFrame","");},
+        click: function(){window.open("left2.html#309","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [41.8714323, 12.5658981], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#317","mainFrame","");},
+        click: function(){window.open("left2.html#317","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	.jHERE('marker', [41.509722, 140.910278], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#377","mainFrame","");},
+        click: function(){window.open("left2.html#377","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [36.2124397, 138.246394], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#387","mainFrame","");},
+        click: function(){window.open("left2.html#387","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [37.28, 141.00], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#389","mainFrame","");},
+        click: function(){window.open("left2.html#389","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [29.527312074593198, 35.00638899291995], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#393","mainFrame","");},
+        click: function(){window.open("left2.html#393","mainFrame","");}
+		       
+    })
+	
+	
+	
+	.jHERE('marker', [43.63886116529275, 51.197824654492244], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#394","mainFrame","");},
+        click: function(){window.open("left2.html#394","mainFrame","");}
+		       
+    })
+	
+	
+	.jHERE('marker', [59.55, 30.15], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left2.html#451","mainFrame","");},
+        click: function(){window.open("left2.html#451","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	.jHERE('marker', [24.2148344, 52.1897916], {
+    	icon: 'logo2.png',
+        anchor: {x: 10, y: 10},
+		mouseover: function(){window.open("left3.html#554","mainFrame","");},
+        click: function(){window.open("left3.html#554","mainFrame","");}
+		       
+    })
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	});
+
+
+//$(document.getElementById('iframeId').contentWindow.document.body).htm()
+//window.parent.frames["topFrame"].document).find("#x1").text();
+//window.parent.frames[1].location.href="newpage.html"
+//click: function(){window.location="left.html#2";}
+//click: function(){window.open("country.html","bottom","");}
+//click: function(){alert('Hallo from Berlin!!!!!!!!!!!!!');}
+//mouseover: function(){$("div").text("脚本之家欢迎您！")},
+
+</script></body>
+</html>
